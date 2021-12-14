@@ -26,6 +26,7 @@
             background-color: #80A1DA;
         }
         .wrapper{
+            margin-top: 5%;
         }
         .login{
             display: flex;
@@ -35,7 +36,7 @@
             height: auto;
             padding: 30px;
             margin: 0 auto;
-            margin-top: 50%;
+
             background-color: white;
             border-radius: 20px;
         }
