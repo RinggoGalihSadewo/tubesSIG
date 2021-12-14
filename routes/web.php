@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,6 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/beranda', [UserController::class, 'index']);
+Route::get('/', [UserController::class, 'index']);
+
+Route::get('/login', [AdminController::class, 'loginPage']);
