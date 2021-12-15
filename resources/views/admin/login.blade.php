@@ -26,7 +26,7 @@
             background-color: #80A1DA;
         }
         .wrapper{
-            margin-top: 5%;
+            margin-top: 6%;
         }
         .login{
             display: flex;
@@ -70,8 +70,11 @@
 
                     <label for="pw" class="mt-4" style="color: #4366A3;"><h4>Password</h4></label>
                     <input type="password" class="form-control mt-2" name="password" id="pw" placeholder="Password">
-
-                    <button type="submit" class="btn btn-primary mt-4" style="width: 100%; background-color: #4366A3;">LOGIN</button>
+                   
+                    <a href="{{url('/dashboard')}}" class="btn btn-primary mt-4" style="width: 100%; background-color: #4366A3;">
+                        LOGIN
+                        <!-- <button type="submit" class="btn btn-primary mt-4" style="width: 100%; background-color: #4366A3;">LOGIN</button> -->
+                    </a>
                 </form>
             </div>
         </div>

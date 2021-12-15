@@ -19,3 +19,9 @@ use App\Http\Controllers\AdminController;
 Route::get('/', [UserController::class, 'index']);
 
 Route::get('/login', [AdminController::class, 'loginPage']);
+
+Route::get('/dashboard', [AdminController::class, 'index']);
+
+Route::get('/detail', [AdminController::class, 'detail']);
+
+Route::get('/edit', [AdminController::class, 'edit']);

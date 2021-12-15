@@ -14,6 +14,7 @@ class AdminController extends Controller
     public function index()
     {
         //
+        return view('admin.index');
     }
 
     public function loginPage(){
@@ -21,7 +22,14 @@ class AdminController extends Controller
         return view('admin.login');
     
     }
+    
+    public function detail(){
+        return view('admin.detail');
+    }
 
+    public function edit(){
+        return view('admin.edit');
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -60,7 +68,7 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function editing($id)
     {
         //
     }
