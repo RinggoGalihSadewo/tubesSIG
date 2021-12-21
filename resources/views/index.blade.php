@@ -114,8 +114,7 @@
                         <div class="row">
                             <div class="col-12 col-sm-4">
                                 <div class="info1">
-                                    <h3><b>13</b> Kabupaten</h3>
-                                    <h3><b>2</b> Kota</h3>
+                                    <h3>Nama Kabupaten</h3>
                                 </div>
                                 <div class="info2 mt-3">
                                 <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -189,26 +188,6 @@
                                         <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
                                         </div>
                                     </div>
-                                    <!-- <div class="accordion-item">
-                                        <h2 class="accordion-header" id="flush-headingSeven">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseThree">
-                                            Pesawaran
-                                        </button>
-                                        </h2>
-                                        <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="flush-headingEight">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseThree">
-                                            Pesisir Barat
-                                        </button>
-                                        </h2>
-                                        <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                                        </div>
-                                    </div>
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="flush-headingNine">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseThree">
@@ -218,7 +197,7 @@
                                         <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
                                         </div>
-                                    </div>                                         -->
+                                    </div>                                        
                                     </div>
                                 </div>                          
                             </div>
@@ -226,40 +205,99 @@
                                 <div id="map"></div>
                             </div>
                         </div>
-                    </div>            
-                </div>   
-            </section>
-
-            <section>
-                <div class="container resiko mt-4">
-                    <center>
+                    </div> 
+                    
+                    <div class="row mt-5">
+                        <div class="col-12">
+                        <center>
                         <div class="row">
                             <div class="col-4">
                                 <div>
-                                    <img src="/img/red.png" alt=""> 0(.00%)
-                                </div>
-                                <div class="mt-sm-3">
+                                    <img src="/img/red.png" alt="">
                                     <b>Resiko Tinggi</b>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div>
-                                    <img src="/img/yellow.png" alt=""> 477(92.80%)
-                                </div>
-                                <div class="mt-sm-3">
+                                    <img src="/img/yellow.png" alt="">
                                     <b>Resiko Sedang</b>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div>
-                                    <img src="/img/green.png" alt=""> 37(7.20%)
-                                </div>
-                                <div class="mt-sm-3">
+                                    <img src="/img/green.png" alt="">
                                     <b>Resiko Rendah</b>
                                 </div>
                             </div>
                         </div>
                     </center>
+                        </div>
+                    </div>
+                </div>   
+            </section>
+
+            <section>
+                <div class="container riwayat mt-4">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center" >
+                            <h1 style="border-bottom: 2px solid #0F7CE1;"><img src="/img/riwayat.png" alt=""> <b>Riwayat</b></h1>
+                        </div>
+                    </div>
+                    <div style="margin-top: 4%;">
+                        <div class="row">
+                            <div class="col-2">
+                                <h2><b>Kabupaten</b></h2>
+                            </div>
+                            <div class="col-4">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Lampung Barat</option>
+                                <option>Lampung Selatan</option>
+                                <option>Lampung Tengah</option>
+                                <option>Lampung Timur</option>
+                                <option>Lampung Utara</option>
+                                <option>Mesuji</option>
+                                <option>Bandar Lampung</option>
+                                <option>Pesawaran</option>
+                                <option>Pesisir Barat</option>
+                                <option>Pringsewu</option>
+                            </select>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                    <th scope="col">Tanggal</th>
+                                    <th scope="col">Positif</th>
+                                    <th scope="col">Sembuh</th>
+                                    <th scope="col">Meninggal</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <th scope="row">12/03/2020</th>
+                                    <td>31</td>
+                                    <td>32</td>
+                                    <td>53</td>
+                                    </tr>
+                                    <tr>
+                                    <th scope="row">1/06/2021</th>
+                                    <td>52</td>
+                                    <td>123</td>
+                                    <td>4</td>
+                                    </tr>
+                                    <tr>
+                                    <th scope="row">5/03/2021</th>
+                                    <td>35</td>
+                                    <td>34</td>
+                                    <td>23</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 

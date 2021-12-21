@@ -4,53 +4,43 @@
 
 @section('mainContent')
 
+<h1>Nama Kabupaten</h1>
 <div class="d-flex align-items-center justify-content-center" style="margin-top: 5%;">
+    <table class="table">
+        <th><b>Keterangan<b></th>
+        <th><b>Jumlah</b></th>
 
-    <table width="100%">
+        <form action="">
+
         <tr>
-            <td>Jumlah</td>
-            <td>Kabupaten</td>
-            <td>Keterangan</td>
+            <td>Positif</td>
+            <td>
+                <input type="text" class="form-control" name="positif" value="123">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Sembuh</td>
+            <td>
+                <input type="text" class="form-control" name="sembuh" value="23">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Meninggal</td>
+            <td>
+                <input type="text" class="form-control" name="meninggal" value="23">
+            </td>
         </tr>
         
-        <form action="" method="POST">
-
         <tr>
+            <td collspan="2"></td>
             <td>
-                <input type="text" class="form-control" name="positif" value="3">
-            </td>
-            <td>Lampung Barat</td>
-            <td>Positif</td>
-        </tr>
-
-        <tr>
-            <td>
-                <input type="text" class="form-control" name="positif" value="276">
-            </td>
-            <td>Lampung Barat</td>
-            <td>Sembuh</td>
-        </tr>
-
-        <tr>
-            <td>
-                <input type="text" class="form-control" name="positif" value="70">
-            </td>
-            <td>Lampung Barat</td>
-            <td>Meninggal</td>
-        </tr>
-        <br>
-        <tr>
-            <td></td>
-            <td></td>
-            <td>
-                <button type="submit" class="btn text-white" id="btnSearch" style="background-color: #4366A3;" name="simpan">SIMPAN</button>
+                <button type="submit" class="btn btn-primary">Simpan</button>
             </td>
         </tr>
-
         </form>
-
     </table>
-
 </div>
 
 @endsection
