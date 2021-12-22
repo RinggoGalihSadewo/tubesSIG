@@ -249,17 +249,14 @@
                                 <h2><b>Kabupaten</b></h2>
                             </div>
                             <div class="col-4">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Lampung Barat</option>
-                                <option>Lampung Selatan</option>
-                                <option>Lampung Tengah</option>
-                                <option>Lampung Timur</option>
-                                <option>Lampung Utara</option>
-                                <option>Mesuji</option>
-                                <option>Bandar Lampung</option>
-                                <option>Pesawaran</option>
-                                <option>Pesisir Barat</option>
-                                <option>Pringsewu</option>
+                            <select onchange="test()" id="wilayah" class="form-select" aria-label="Default select example">
+                                <option value="lampungBarat" selected>Lampung Barat</option>
+                                <option value="lampungSelatan">Lampung Selatan</option>
+                                <option value="lampungTengah">Lampung Tengah</option>
+                                <option value="lampungTimur">Lampung Timur</option>
+                                <option value="lampungUtara">Lampung Utara</option>
+                                <option value="mesuji">Mesuji</option>
+                                <option value="bandarLampung">Bandar Lampung</option>
                             </select>
                             </div>
                         </div>
@@ -277,22 +274,11 @@
                                 <tbody>
                                     <tr>
                                     <th scope="row">12/03/2020</th>
-                                    <td>31</td>
-                                    <td>32</td>
-                                    <td>53</td>
+                                    <td id="positif">31</td>
+                                    <td id="sembuh">32</td>
+                                    <td id="meninggal">53</td>
                                     </tr>
-                                    <tr>
-                                    <th scope="row">1/06/2021</th>
-                                    <td>52</td>
-                                    <td>123</td>
-                                    <td>4</td>
-                                    </tr>
-                                    <tr>
-                                    <th scope="row">5/03/2021</th>
-                                    <td>35</td>
-                                    <td>34</td>
-                                    <td>23</td>
-                                    </tr>
+                                    
                                 </tbody>
                             </table>
                             </div>
@@ -327,4 +313,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
   </body>
+
+  <script>
+
+
+      function test(){
+        var value = document.getElementById('wilayah').value 
+
+        var positf = document.getElementById('positif') 
+        var sembuh = document.getElementById('sembuh')
+        var meninggal = document.getElementById('meninggal')
+         
+
+          fetch(`http://localhost:4000/data/${value}`)
+            .then(response => response.json())
+            .then(response => {
+                positif.innerHTML = response.positif ;
+                sembuh.innerHTML = response.sembuh ;
+                meninggal.innerHTML = response.meninggal ;
+            })
+      }
+</script>
 </html>
