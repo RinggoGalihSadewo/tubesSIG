@@ -112,6 +112,57 @@
           </div>
       </td>
     </tr>
+
+    <tr>
+      <th scope="row" class="text-center">5</th>
+      <td>Lampung Tengah</td>
+      <td>Resiko Tinggi</td>
+      <td>
+          <div class="d-flex justify-content-center">
+              <a href="{{url('/detail/lampungTengah')}}" style="margin-right: 8px;">
+                  <img src="/img/detail.png" alt="">
+              </a>
+              <a href="{{url('/edit/lampungTengah')}}" style="margin-right: 8px;">
+                  <img src="/img/edit.png" alt="">
+              </a>
+
+          </div>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row" class="text-center">6</th>
+      <td>Lampung Timur</td>
+      <td>Resiko Tinggi</td>
+      <td>
+          <div class="d-flex justify-content-center">
+              <a href="{{url('/detail/lampungTimur')}}" style="margin-right: 8px;">
+                  <img src="/img/detail.png" alt="">
+              </a>
+              <a href="{{url('/edit/lampungTimur')}}" style="margin-right: 8px;">
+                  <img src="/img/edit.png" alt="">
+              </a>
+
+          </div>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row" class="text-center">7</th>
+      <td>Pringsewu</td>
+      <td>Resiko Tinggi</td>
+      <td>
+          <div class="d-flex justify-content-center">
+              <a href="{{url('/detail/pringsewu')}}" style="margin-right: 8px;">
+                  <img src="/img/detail.png" alt="">
+              </a>
+              <a href="{{url('/edit/pringsewu')}}" style="margin-right: 8px;">
+                  <img src="/img/edit.png" alt="">
+              </a>
+
+          </div>
+      </td>
+    </tr>
   </tbody>
 </table>
 <script src="https://kit.fontawesome.com/dfa1cbbb7b.js" crossorigin="anonymous"></script>
