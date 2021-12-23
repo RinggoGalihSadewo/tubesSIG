@@ -27,7 +27,7 @@
 
     <title>Wilayah Covid</title>
   </head>
-  <body onload="test2()">
+  <body onload="init()">
 
     <div class="container-sm-fluid">
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -316,9 +316,187 @@
 
   <script>
 
+
         var positf = document.getElementById('positif') 
         var sembuh = document.getElementById('sembuh')
         var meninggal = document.getElementById('meninggal')
+
+        var data 
+
+    function init(){
+        test2()
+        getData()
+    }
+
+  async function getData(){
+    await fetch('http://localhost:4000/data/get')
+    .then(response => response.json())
+    .then(json => {
+        data = json[0].data
+    })
+
+    console.log(data)
+
+    var map = L.map('map').setView([-5.42544, 105.25803], 10);
+
+    var marker = L.marker([-5.42544, 105.25803]).addTo(map);
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Team Adidas | Tugas Besar Sistem Informasi Geografis',
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: 'pk.eyJ1IjoicmluZ2dvMDciLCJhIjoiY2t4MHB2ZjJ0MHV3YzJycHo0OHhzZGIwOSJ9.odEp1QZ9gCcw9biNi2j6Tg'
+    }).addTo(map);
+
+    var lampungTimur = L.polygon([
+        [-5.334378846376091, 105.809326171875],
+        [-5.2386573862016, 105.86151123046875],
+        [-4.814575430505828, 105.85052490234375],
+        [-4.814575430505828, 105.6170654296875],
+        [-4.874784352885863, 105.07598876953125],
+        [-4.9979220896098475, 105.2325439453125],
+        [-5.263272887191521, 105.38360595703125],
+        [-5.334378846376091, 105.809326171875]
+    ]).addTo(map);
+
+    lampungTimur.bindPopup(`Lampung Timur <br><br> Positif: ${data.lampungTimur.positif}<br><br> Negatif: ${data.lampungTimur.sembuh} <br><br> Meninggal: ${data.lampungTimur.meninggal}`);
+
+    var lampungSelatan = L.polygon([
+        [-4.882994243904852, 105.09521484375],
+        [-5.014338718527196, 104.688720703125],
+        [-5.501171835635236, 104.644775390625],
+        [-5.801826969242172, 105.18310546875],
+        [-5.555847953199212, 105.1885986328125],
+        [-5.227716852021079, 105.1116943359375],
+        [-5.2386573862016, 105.3369140625],
+        [-5.867403444598698, 105.6390380859375],
+        [-5.8127569137510084, 105.787353515625],
+        [-5.348052128123205, 105.7928466796875],
+        [-4.882994243904852, 105.09521484375]
+    ]).addTo(map);
+
+    lampungSelatan.bindPopup(`Lampung Selatan <br><br> Positif: ${data.lampungSelatan.positif}<br><br> Negatif: ${data.lampungSelatan.sembuh} <br><br> Meninggal: ${data.lampungSelatan.meninggal}`);
+
+    var lampungTengah = L.polygon([
+        [-5.00339434502215, 104.6832275390625],
+        [-4.817312315826116, 105.8367919921875],
+        [-4.149200693099276, 105.8367919921875],
+        [-3.7710780569298117, 105.34790039062499],
+        [-4.160158150193397, 104.9468994140625],
+        [-4.335456463573485, 104.3865966796875],
+        [-4.773520832778661, 104.26025390625],
+        [-5.00339434502215, 104.6832275390625]
+    ]).addTo(map);
+
+    lampungTengah.bindPopup(`Lampung Tengah <br><br> Positif:${data.lampungTengah.positif} <br><br> Negatif: ${data.lampungTengah.sembuh} <br><br> Meninggal: ${data.lampungTengah.meninggal}`);
+
+    var bandarLampung = L.polygon([
+        [-5.585917657852072, 105.23803710937499],
+        [-5.446490692533117, 105.281982421875],
+        [-5.695248967605625, 105.52230834960938],
+        [-5.662451740971942, 105.53329467773438],
+        [-5.242760037159453, 105.3369140625],
+        [-5.230452003501331, 105.11444091796874],
+        [-5.591384711305773, 105.19134521484374],
+        [-5.585917657852072,  105.23803710937499]
+    ]).addTo(map);
+
+    bandarLampung.bindPopup(`Bandar Lampung <br><br> Positif: ${data.bandarLampung.positif}<br><br> Negatif:${data.bandarLampung.sembuh} <br><br> Meninggal: ${data.bandarLampung.meninggal}`);
+
+    var lampungBarat = L.polygon([
+        [-4.784468966579362 ,104.2547607421875 ],
+        [ -5.55038056899795 , 104.4085693359375 ],
+        [-5.954826733929924 , 104.6282958984375  ],
+        [-5.927508440962705 , 104.71618652343749 ],
+        [-5.484768018141262 , 104.62280273437499, ],
+        [-4.9979220896098475 , 104.666748046875 ],
+        [ -4.784468966579362 , 104.2547607421875 ]
+    ]).addTo(map);
+
+    lampungBarat.bindPopup(`Lampung Barat <br><br> Positif: ${data.lampungBarat.positif}<br><br> Negatif: ${data.lampungBarat.sembuh}<br><br> Meninggal: ${data.lampungBarat.meninggal}`);
+
+    var lampungBarat2 = L.polygon([   
+        [-4.335456463573485,104.4085693359375],
+        [-4.006740062068221 ,103.74938964843749  ],
+        [-4.653079918274038 ,103.194580078125],
+        [-5.834616165610046 ,104.556884765625],
+        [ -4.335456463573485 ,104.4085693359375]
+    ]).addTo(map);
+
+    lampungBarat2.bindPopup(`Lampung Barat <br><br> Positif: ${data.lampungBarat.positif}<br><br> Negatif: ${data.lampungBarat.sembuh}<br><br> Meninggal: ${data.lampungBarat.meninggal}`);
+
+    // var polygon7 = L.polygon([
+    //     [-4.127285323245357 , 105.84228515625 ],
+    //     [ -4.116327411282937 , 105.84228515625],
+    //     [-4.116327411282937 ,105.84228515625],
+    //     [-4.127285323245357 ,105.84228515625 ]
+    // ]).addTo(map);
+
+    var mesuji = L.polygon([
+        [-4.127285323245357 , 105.86975097656249],
+        [ -3.4585910482810767 , 105.8203125 ],
+        [-3.370856476926319 , 105.2325439453125 ],
+        [ -3.535352145400865, 104.8590087890625 ],
+        [ -3.8204080831949407 , 104.8370361328125],
+        [ -3.9574209405181326 , 105.150146484375],
+        [ -3.7765593098768635 , 105.3424072265625],
+        [-4.127285323245357 , 105.86975097656249]
+    ]).addTo(map);
+
+    mesuji.bindPopup(`Mesuji <br><br> Positif: ${data.mesuji.positif}<br><br> Negatif: ${data.mesuji.sembuh}<br><br> Meninggal: ${data.mesuji.meninggal}`);
+
+
+    var lampungUtara = L.polygon([
+        [-3.8204080831949407 , 104.820556640625 ],
+        [-4.17659404992233 , 104.08447265624999 ],
+        [-4.3299789981207795, 104.3865966796875],
+        [-4.149200693099276, 104.95788574218749 ],
+        [-3.9738609758391017 , 105.13916015625 ],
+        [ -3.8204080831949407,104.820556640625]
+    ]).addTo(map);
+
+    lampungUtara.bindPopup(`lampung Utara <br><br> Positif: ${data.lampungUtara.positif}<br><br> Negatif: ${data.lampungBarat.sembuh}<br><br> Meninggal: ${data.lampungUtara.meninggal}`);
+
+    // Status 
+    lampungUtara.setStyle({
+        color: data.lampungUtara.positif > 30 ? 'red' : 'green'
+    });
+
+    lampungTengah.setStyle({
+        color: data.lampungTengah.positif > 30 ? 'red' : 'green'
+    });
+
+
+    lampungTimur.setStyle({
+        color: data.lampungTimur.positif > 30 ? 'red' : 'green'
+    });
+
+
+    lampungBarat.setStyle({
+        color: data.lampungBarat.positif > 30 ? 'red' : 'green'
+    });
+
+    lampungBarat2.setStyle({
+        color: data.lampungBarat.positif > 30 ? 'red' : 'green'
+    });
+
+    lampungSelatan.setStyle({
+        color: data.lampungSelatan.positif > 30 ? 'red' : 'green'
+    });
+
+    bandarLampung.setStyle({
+        color: data.bandarLampung.positif > 30 ? 'red' : 'green'
+    });
+
+
+    mesuji.setStyle({
+        color: data.mesuji.positif > 30 ? 'red' : 'green'
+    });
+
+}
+
 
       function test2(){
         fetch(`http://localhost:4000/data/lampungBarat`)
