@@ -27,7 +27,7 @@
 
     <title>Wilayah Covid</title>
   </head>
-  <body>
+  <body onload="test2()">
 
     <div class="container-sm-fluid">
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -316,13 +316,23 @@
 
   <script>
 
-
-      function test(){
-        var value = document.getElementById('wilayah').value 
-
         var positf = document.getElementById('positif') 
         var sembuh = document.getElementById('sembuh')
         var meninggal = document.getElementById('meninggal')
+
+      function test2(){
+        fetch(`http://localhost:4000/data/lampungBarat`)
+            .then(response => response.json())
+            .then(response => {
+                positif.innerHTML = response.positif ;
+                sembuh.innerHTML = response.sembuh ;
+                meninggal.innerHTML = response.meninggal ;
+            })
+      }
+
+
+      function test(){
+        var value = document.getElementById('wilayah').value 
          
 
           fetch(`http://localhost:4000/data/${value}`)

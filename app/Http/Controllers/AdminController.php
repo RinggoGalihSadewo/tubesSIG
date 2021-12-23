@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class AdminController extends Controller
 {
@@ -27,8 +28,11 @@ class AdminController extends Controller
         return view('admin.detail');
     }
 
-    public function edit(){
-        return view('admin.edit');
+    public function edit(string $wilayah){
+
+        $response = Http::get('http://localhost:4000/data/lampungBarat');
+
+        return view('admin.edit' , [ 'wilayah' => $wilayah , 'data' => $response->json()] );
     }
     /**
      * Show the form for creating a new resource.

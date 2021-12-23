@@ -40,7 +40,7 @@
               <a href="{{url('/detail')}}" style="margin-right: 8px;">
                   <img src="/img/detail.png" alt="">
               </a>
-              <a href="{{url('/edit')}}" style="margin-right: 8px;">
+              <a href="{{url('/edit/lampungSelatan')}}" style="margin-right: 8px;">
                   <img src="/img/edit.png" alt="">
               </a>
               <a href="" onclick="return confirm('Ingin menghapus data ini ?')">
@@ -59,7 +59,7 @@
               <a href="{{url('/detail')}}" style="margin-right: 8px;">
                   <img src="/img/detail.png" alt="">
               </a>
-              <a href="{{url('/edit')}}" style="margin-right: 8px;">
+              <a href="{{url('/edit/bandarLampung')}}" style="margin-right: 8px;">
                   <img src="/img/edit.png" alt="">
               </a>
               <a href="" onclick="return confirm('Ingin menghapus data ini ?')">
@@ -78,7 +78,7 @@
               <a href="{{url('/detail')}}" style="margin-right: 8px;">
                   <img src="/img/detail.png" alt="">
               </a>
-              <a href="{{url('/edit')}}" style="margin-right: 8px;">
+              <a href="{{url('/edit/mesuji')}}" style="margin-right: 8px;">
                   <img src="/img/edit.png" alt="">
               </a>
               <a href="" onclick="return confirm('Ingin menghapus data ini ?')">
@@ -97,7 +97,7 @@
               <a href="{{url('/detail')}}" style="margin-right: 8px;">
                   <img src="/img/detail.png" alt="">
               </a>
-              <a href="{{url('/edit')}}" style="margin-right: 8px;">
+              <a href="{{url('/edit/lampungBarat')}}" style="margin-right: 8px;">
                   <img src="/img/edit.png" alt="">
               </a>
               <a href="" onclick="return confirm('Ingin menghapus data ini ?')">
@@ -116,7 +116,7 @@
               <a href="{{url('/detail')}}" style="margin-right: 8px;">
                   <img src="/img/detail.png" alt="">
               </a>
-              <a href="{{url('/edit')}}" style="margin-right: 8px;">
+              <a href="{{url('/edit/lampungUtara')}}" style="margin-right: 8px;">
                   <img src="/img/edit.png" alt="">
               </a>
               <a href="" onclick="return confirm('Ingin menghapus data ini ?')">
