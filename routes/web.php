@@ -25,3 +25,5 @@ Route::get('/dashboard', [AdminController::class, 'index']);
 Route::get('/detail', [AdminController::class, 'detail']);
 
 Route::get('/edit/{wilayah}', [AdminController::class, 'edit']);
+
+Route::get('/update/{wilayah}', [AdminController::class, 'update']);

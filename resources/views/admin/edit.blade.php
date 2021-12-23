@@ -10,7 +10,7 @@
         <th><b>Keterangan<b></th>
         <th><b>Jumlah</b></th>
 
-        <form action="">
+        <form action="/update/{{$wilayah}}">
 
         <tr>
             <td>Positif</td>

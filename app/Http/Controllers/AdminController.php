@@ -30,7 +30,7 @@ class AdminController extends Controller
 
     public function edit(string $wilayah){
 
-        $response = Http::get('http://localhost:4000/data/lampungBarat');
+        $response = Http::get('http://localhost:4000/data/'. $wilayah);
 
         return view('admin.edit' , [ 'wilayah' => $wilayah , 'data' => $response->json()] );
     }
@@ -84,9 +84,17 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request , string $wilayah)
     {
         //
+
+        $response = Http::post('http://localhost:4000/data/update/'. $wilayah , [
+            'positif' => $request->positif ,
+            'sembuh' => $request->sembuh ,
+            'meninggal' => $request->meninggal
+
+        ]) ;
+        
     }
 
     /**
