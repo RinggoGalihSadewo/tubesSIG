@@ -37,7 +37,7 @@
       <td>Resiko Sedang</td>
       <td>
           <div class="d-flex justify-content-center">
-              <a href="{{url('/detail')}}" style="margin-right: 8px;">
+              <a href="{{url('/detail/lampungSelatan')}}" style="margin-right: 8px;">
                   <img src="/img/detail.png" alt="">
               </a>
               <a href="{{url('/edit/lampungSelatan')}}" style="margin-right: 8px;">
@@ -56,7 +56,7 @@
       <td>Resiko Tinggi</td>
       <td>
           <div class="d-flex justify-content-center">
-              <a href="{{url('/detail')}}" style="margin-right: 8px;">
+              <a href="{{url('/detail/bandarLampung')}}" style="margin-right: 8px;">
                   <img src="/img/detail.png" alt="">
               </a>
               <a href="{{url('/edit/bandarLampung')}}" style="margin-right: 8px;">
@@ -75,7 +75,7 @@
       <td>Resiko Rendah</td>
       <td>
           <div class="d-flex justify-content-center">
-              <a href="{{url('/detail')}}" style="margin-right: 8px;">
+              <a href="{{url('/detail/mesuji')}}" style="margin-right: 8px;">
                   <img src="/img/detail.png" alt="">
               </a>
               <a href="{{url('/edit/mesuji')}}" style="margin-right: 8px;">
@@ -94,7 +94,7 @@
       <td>Resiko Sedang</td>
       <td>
           <div class="d-flex justify-content-center">
-              <a href="{{url('/detail')}}" style="margin-right: 8px;">
+              <a href="{{url('/detail/lampungBarat')}}" style="margin-right: 8px;">
                   <img src="/img/detail.png" alt="">
               </a>
               <a href="{{url('/edit/lampungBarat')}}" style="margin-right: 8px;">
@@ -113,7 +113,7 @@
       <td>Resiko Tinggi</td>
       <td>
           <div class="d-flex justify-content-center">
-              <a href="{{url('/detail')}}" style="margin-right: 8px;">
+              <a href="{{url('/detail/lampungUtara')}}" style="margin-right: 8px;">
                   <img src="/img/detail.png" alt="">
               </a>
               <a href="{{url('/edit/lampungUtara')}}" style="margin-right: 8px;">

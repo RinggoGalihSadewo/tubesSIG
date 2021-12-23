@@ -24,8 +24,11 @@ class AdminController extends Controller
     
     }
     
-    public function detail(){
-        return view('admin.detail');
+    public function detail(string $wilayah){
+
+        $response = Http::get('http://localhost:4000/data/'. $wilayah);
+
+        return view('admin.detail' , [ 'wilayah' => $wilayah , 'data' => $response->json()]);
     }
 
     public function edit(string $wilayah){

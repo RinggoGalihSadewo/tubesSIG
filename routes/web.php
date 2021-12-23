@@ -22,7 +22,7 @@ Route::get('/login', [AdminController::class, 'loginPage']);
 
 Route::get('/dashboard', [AdminController::class, 'index']);
 
-Route::get('/detail', [AdminController::class, 'detail']);
+Route::get('/detail/{wilayah}', [AdminController::class, 'detail']);
 
 Route::get('/edit/{wilayah}', [AdminController::class, 'edit']);
 

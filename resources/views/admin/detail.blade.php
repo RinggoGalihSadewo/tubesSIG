@@ -13,11 +13,11 @@
   <tbody>
     <tr>
       <td>
-          <b>Nama Wilayah   : </b> Kabupaten Lampung Tengah <br>
-          <b>Status   : </b> Resiko Tinggi <br>
-          <b>Jumlah Positif   : </b> 200 <br> 
-          <b>Jumlah Sembuh   : </b> 10 <br>
-          <b>Jumlah Meninggal   : </b> 0 <br>
+          <b>Nama Wilayah   : </b> Kabupaten {{$wilayah}}<br>
+          <b>Status   : </b> Resiko  {{$data['positif'] > 50 ? "Tinggi" : "Rendah"}} <br>
+          <b>Jumlah Positif   : </b> {{$data['positif']}} <br> 
+          <b>Jumlah Sembuh   : </b> {{$data['sembuh']}} <br>
+          <b>Jumlah Meninggal   : </b> {{$data['meninggal']}} <br>
       </td>
     </tr>
 
