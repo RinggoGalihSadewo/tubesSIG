@@ -97,6 +97,8 @@ class AdminController extends Controller
             'meninggal' => $request->meninggal
 
         ]) ;
+
+        return redirect('/dashboard') ;
         
     }
 

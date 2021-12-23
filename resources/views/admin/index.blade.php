@@ -43,9 +43,6 @@
               <a href="{{url('/edit/lampungSelatan')}}" style="margin-right: 8px;">
                   <img src="/img/edit.png" alt="">
               </a>
-              <a href="" onclick="return confirm('Ingin menghapus data ini ?')">
-                  <img src="/img/hapus.png" alt="">
-              </a>
           </div>
       </td>
     </tr>
@@ -62,9 +59,7 @@
               <a href="{{url('/edit/bandarLampung')}}" style="margin-right: 8px;">
                   <img src="/img/edit.png" alt="">
               </a>
-              <a href="" onclick="return confirm('Ingin menghapus data ini ?')">
-                  <img src="/img/hapus.png" alt="">
-              </a>
+
           </div>
       </td>
     </tr>
@@ -80,9 +75,6 @@
               </a>
               <a href="{{url('/edit/mesuji')}}" style="margin-right: 8px;">
                   <img src="/img/edit.png" alt="">
-              </a>
-              <a href="" onclick="return confirm('Ingin menghapus data ini ?')">
-                  <img src="/img/hapus.png" alt="">
               </a>
           </div>
       </td>
@@ -100,9 +92,6 @@
               <a href="{{url('/edit/lampungBarat')}}" style="margin-right: 8px;">
                   <img src="/img/edit.png" alt="">
               </a>
-              <a href="" onclick="return confirm('Ingin menghapus data ini ?')">
-                  <img src="/img/hapus.png" alt="">
-              </a>
           </div>
       </td>
     </tr>
@@ -119,9 +108,7 @@
               <a href="{{url('/edit/lampungUtara')}}" style="margin-right: 8px;">
                   <img src="/img/edit.png" alt="">
               </a>
-              <a href="" onclick="return confirm('Ingin menghapus data ini ?')">
-                  <img src="/img/hapus.png" alt="">
-              </a>
+
           </div>
       </td>
     </tr>
